@@ -1,9 +1,10 @@
-import { Routes, Route, Link } from "react-router-dom";
-// import hero from '../assets/Home-Hero-Image.jpg';
+import { useState } from "react";
+import {  Link, Routes, Route } from "react-router-dom";
+import {   animateScroll as scroll } from "react-scroll";
+
 
 
 function HomeHeader() {
-
 
     return (
         <>
@@ -18,8 +19,8 @@ function HomeHeader() {
 
                     <nav className="navbar_navigation">
                         <Link className='navbar_navigation-links' to="/">Start</Link>
-                        <Link className='navbar_navigation-links' to="/whatsUp">O co chodzi?</Link>
-                        <Link className='navbar_navigation-links' to="/aboutUs">O nas</Link>
+                        <Link activeClass='active' spy={true} smooth={true} offset={50} duration={500} className='navbar_navigation-links' to="/whatsUp">O co chodzi?</Link>
+                        <Link className='navbar_navigation-links' activeClass='active' to="aboutUs" spy={true} smooth={true} offset={100} duration={500}>O nas</Link>
                         <Link className='navbar_navigation-links' to="/fundaction">Fundacje i organizacje</Link>
                         <Link className='navbar_navigation-links' to="/contact">Kontakt</Link>
 
@@ -32,11 +33,13 @@ function HomeHeader() {
                     
                     </div>
                     <div className="header_content-boxes">
-                        <div className="header_content-boxes-box">ODDAJ RZECZY</div>
-                        <div className="header_content-boxes-box">ZORGANIZUJ ZBIÓRKĘ</div>
+                        <Link to='signIn' className="header_content-boxes-box">ODDAJ RZECZY</Link>
+                        <Link to='/signIn' className="header_content-boxes-box">ZORGANIZUJ ZBIÓRKĘ</Link>
                     </div>
                 </div>
-                
+                <div id='aboutUs'>
+                <div name='aboutUs'>Hello</div>
+                </div>
             </header>
             
         

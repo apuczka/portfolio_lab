@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./scss/App.scss";
 import Home from "./components/Home";
 
@@ -15,20 +16,5 @@ function App() {
 }
 
 
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
-  );
-}
+
 export default App;

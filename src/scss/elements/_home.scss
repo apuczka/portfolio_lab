@@ -2,51 +2,11 @@
 @import "../settings/fonts";
 
 
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    background-image: url(../../assets/Home-Hero-Image.jpg);
-    height: 963px;
-
-
-    &_content {
-        margin-top: 219px;
-        margin-right: 275px;
-        font-size: 36px;
-        color: $dark-grey;
-
-        &-theme {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            }
-
-        &-boxes {
-            display: flex;
-            font-size: 38px;
-
-            &-box {
-                border: 0.75px solid $dark-grey;
-                margin-right: 44px;
-                padding: 13px 93px;
-                
-            }
-        }
-    }
-}
-
-
-
-
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 142px;
-//     position: absolute;
-//   top: 8px;
-//   right: 16px;
 
 
     &_sign {
@@ -55,11 +15,17 @@
         margin-top: 46px;
         margin-bottom: 34px;
 
+       
+
 
         &-links {
             text-decoration: none;
             color: inherit;
             margin-left: 20px;
+            &:hover {
+                border: $yellow solid 0.75px;
+                padding: 10px;
+            }
 
         }
     }
@@ -75,6 +41,82 @@
             margin-top: 34px;
             padding: 9px;
 
+            &:hover {
+                border: black solid 1px;
+
+            }
+
         }
     }
 }
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(../../assets/Home-Hero-Image.jpg);
+    background-repeat: no-repeat;
+    background-position: -110%;
+    height: 963px;
+
+
+    &_content {
+        margin-top: 219px;
+        margin-right: 275px;
+        font-size: 38px;
+        color: $dark-grey;
+
+       
+
+        &-theme {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            
+            &::after {
+                content: "";
+                background-image: url('../../assets/Decoration.svg');
+                position: relative;
+                width: 253px;
+                height: 20px;
+                display: block;
+                margin-top: 25px;
+
+            }
+
+
+            }
+    
+        
+
+        &-boxes {
+            display: flex;
+            font-size: 36px;
+            width: 674px;
+            margin-top: 65px;
+            position: relative;
+
+             
+           
+    
+
+            
+
+            &-box {
+                border: 0.75px solid $dark-grey;
+                margin-right: 44px;
+                padding: 13px 93px;
+                width: 310px;
+                text-decoration: none;
+                color: inherit;
+                
+            }
+        }
+    }
+}
+
+
+
+
