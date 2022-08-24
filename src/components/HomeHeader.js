@@ -1,6 +1,6 @@
 import { useState } from "react";
-import {  Link, Routes, Route } from "react-router-dom";
-import {   animateScroll as scroll } from "react-scroll";
+import { Link as RouterLink, Routes, Route } from "react-router-dom";
+import {  Link, animateScroll as scroll } from "react-scroll";
 
 
 
@@ -12,17 +12,17 @@ function HomeHeader() {
             <header className="header">
                 <div className="navbar">
                     <nav className="navbar_sign">
-                        <Link className='navbar_sign-links' to="/signIn">Zaloguj się</Link>
-                        <Link className='navbar_sign-links' to="/signUp">Załóż konto</Link>
+                        <RouterLink className='navbar_sign-links' to="/signIn">Zaloguj się</RouterLink>
+                        <RouterLink className='navbar_sign-links' to="/signUp">Załóż konto</RouterLink>
                     </nav>
 
 
                     <nav className="navbar_navigation">
                         <Link className='navbar_navigation-links' to="/">Start</Link>
-                        <Link activeClass='active' spy={true} smooth={true} offset={50} duration={500} className='navbar_navigation-links' to="/whatsUp">O co chodzi?</Link>
-                        <Link className='navbar_navigation-links' activeClass='active' to="aboutUs" spy={true} smooth={true} offset={100} duration={500}>O nas</Link>
-                        <Link className='navbar_navigation-links' to="/fundaction">Fundacje i organizacje</Link>
-                        <Link className='navbar_navigation-links' to="/contact">Kontakt</Link>
+                        <Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={50} duration={250} to="whatsUp">O co chodzi?</Link>
+                        <Link className='navbar_navigation-links' activeClass='active' to="aboutUs" spy={true} smooth={true} offset={0} duration={250}>O nas</Link>
+                        <Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={0} duration={250}to="fundaction">Fundacje i organizacje</Link>
+                        <Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={0} duration={500}to="contact">Kontakt</Link>
 
                     </nav>
                 </div>
@@ -33,13 +33,11 @@ function HomeHeader() {
                     
                     </div>
                     <div className="header_content-boxes">
-                        <Link to='signIn' className="header_content-boxes-box">ODDAJ RZECZY</Link>
-                        <Link to='/signIn' className="header_content-boxes-box">ZORGANIZUJ ZBIÓRKĘ</Link>
+                        <RouterLink to='signIn' className="header_content-boxes-box">ODDAJ RZECZY</RouterLink>
+                        <RouterLink to='/signIn' className="header_content-boxes-box">ZORGANIZUJ ZBIÓRKĘ</RouterLink>
                     </div>
                 </div>
-                <div id='aboutUs'>
-                <div name='aboutUs'>Hello</div>
-                </div>
+                
             </header>
             
         
