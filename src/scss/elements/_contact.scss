@@ -3,16 +3,108 @@
 
 .container {
     &_contact {
-        font-size: 30px;
-        background-image: url('../../assets/Background-Contact-Form.jpg');
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 38px;
+        // background-image: url('../../assets/Background-Contact-Form.jpg');
         height: 1026px;
-        filter: opacity(.3)
+        width: 1900px;
+        // filter: opacity(.3);
+
+        position: relative; 
+        height: 100vh;
+        width: 100%;
+
+        &::before {    
+            content: "";
+            background-image: url('../../assets/Background-Contact-Form.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.3;
+      }
+
+
+
         
         
         &_text {
-            // filter: opacity(1)
+            margin-right: 236px;
+            // filter: none;
+            color: $font-base;
+            text-align: center;
+
+            position: relative;
+             
+            // font-size: 14rem;
+            // line-height: 0.9;
+            text-align: center;
+
+            &::after {
+                content: "";
+                background-image: url('../../assets/Decoration.svg');
+                position: relative;
+                width: 253px;
+                height: 33px;
+                display: block;
+                margin-top: 25px;
+                right: -62px;
+                margin-bottom: 70px;
+                }
         }
     }
 
 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 142px;
+
+    &_name {
+        display: flex;
+        margin-bottom: 40px;
+
+        form {
+            margin-bottom: 44px;
+        }
+
+    }
+    
+    &_message {
+    display: flex;
+    flex-direction: column;
+
+}
+textarea {
+    margin-top: 12px;
+    border: 0;
+    border-bottom: 1px solid black;
+
+}
+
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    margin-top: 44px;
+    background: white;
+    font-size: 18px;
+    border: 0.75px solid black;
+    position: relative;
+    left: 400px;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
 }
