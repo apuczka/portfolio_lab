@@ -1,0 +1,54 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.container {
+
+
+
+    &_aboutUs {
+        display: flex;
+
+
+        &_desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 958px;
+            font-size: 38px;
+
+            &_text {
+                text-align: center;
+                &::after {
+                    content: "";
+                    background-image: url('../../assets/Decoration.svg');
+                    position: relative;
+                    width: 253px;
+                    height: 33px;
+                    display: block;
+                    margin-top: 25px;
+    
+                    }
+    
+            }
+            
+            p {
+                font-size: 30px;
+                width: 656px;
+                text-align: center;
+            }
+            img {
+                margin-left: auto;
+                padding-right: 152px;
+            }
+        }
+
+        &_pic {
+            width: 942px;
+            height: 935px;
+            background-image: url('../../assets/People.jpg');
+
+            
+        }
+    }
+}

@@ -1,0 +1,187 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+
+.container {
+    &_whatsUp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 38px;
+
+        &-theme {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: 55px;
+            margin-bottom: 50px;
+
+
+
+            &::after {
+                content: "";
+                background-image: url('../../assets/Decoration.svg');
+                position: relative;
+                width: 253px;
+                height: 33px;
+                display: block;
+                margin-top: 25px;
+
+                }
+
+        }
+
+       
+        &_steps {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            position: relative;
+            font-size: 16px;
+            background-color: $white;
+            height: 325px;
+            min-width: 1900px;
+
+            &_step {
+                position: relative;
+               
+    
+                
+                &_1,
+                &_2,
+                &_3,
+                &_4 {
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-content: center;
+                    // align-items: center;
+                    width: 164px;
+                    height: 178px;
+                    position:relative;
+                    margin: 0;
+                    margin-top: -40px;
+                    margin-right: 172px;
+                    text-align: center;
+
+                    hr {
+                        width: 60%;
+                        border: 1px black solid;
+                    }
+
+
+                    &::before {
+                        content: "";
+                        background-image: url('../../assets/Icon-1.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position: relative;
+                        width: 83px;
+                        height: 83px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 10px;
+                        }
+                    
+                    :first-child {
+                        font-size: 18px;
+                        margin: 0;
+                        
+                    }
+                }
+                &_2 {
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-content: center;
+                    // align-items: center;
+                    // width: 164px;
+                    // height: 178px;
+                    // position:relative;
+                    // margin: 0;
+                    // margin-top: -40px;
+                    // margin-right: 172px;
+                    
+
+
+                    &::before {
+                        background-image: url('../../assets/Icon-2.svg');
+
+                    }
+                }
+                &_3 {
+                    hr {
+                        width: 80%;
+                        border: 1px black solid;
+                    }
+                    &::before {
+                        background-image: url('../../assets/Icon-3.svg');
+
+                    }
+                }
+                &_4 {
+                    margin-right: 0;
+                 
+                    
+                    &::before {
+                        background-image: url('../../assets/Icon-4.svg');
+
+                    }
+                }
+
+
+                
+                    
+                    
+                }
+
+
+                // &_boxes {
+                //     display: flex;
+                //     font-size: 36px;
+                //     width: 674px;
+                //     margin-top: 65px;
+                //     position: relative;
+                //     font-weight: 300;
+
+                //     &-box {
+                //         border: 0.75px solid $dark-grey;
+                //         margin-right: 44px;
+                //         padding: 13px 93px;
+                //         width: 310px;
+                //         text-decoration: none;
+                //         color: inherit;
+                //     }
+                // }
+
+            }  
+        }
+            
+    }
+
+
+ 
+.container {
+    &_whatsUp {
+
+        &_boxes {
+            display: flex;
+            font-size: 36px;
+            width: 310px;
+            margin-top: 65px;
+            position: relative;
+            font-weight: 300;
+            margin-bottom: 80px;
+
+            &-box {
+                border: 0.75px solid $dark-grey;
+                margin-right: 44px;
+                padding: 13px 93px;
+        
+                text-decoration: none;
+                color: inherit;
+        }
+
+    }
+}
+}  

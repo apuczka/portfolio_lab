@@ -1,0 +1,18 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.container {
+    &_contact {
+        font-size: 30px;
+        background-image: url('../../assets/Background-Contact-Form.jpg');
+        height: 1026px;
+        filter: opacity(.3)
+        
+        
+        &_text {
+            // filter: opacity(1)
+        }
+    }
+
+
+}
