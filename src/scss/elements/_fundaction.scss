@@ -1,0 +1,141 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.container {
+    &_fundaction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 38px;
+        position: relative;
+
+        &-theme {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: 70px;
+            margin-bottom: 62px;
+
+
+
+            &::after {
+                content: "";
+                background-image: url('../../assets/Decoration.svg');
+                position: relative;
+                width: 253px;
+                height: 33px;
+                display: block;
+                margin-top: 25px;
+
+                }
+
+        }
+        &-tabs {
+            display: flex;
+            // position: relative;
+            // right: 400px;
+        }
+
+        &-text {
+            font-size: 22px;
+            margin-top: 69px;
+            margin-bottom: 66px;
+            width: 640px;
+            text-align: center;
+        }
+
+        &-list {
+            font-family: $font-alt;
+            font-size: 18px;
+
+
+        }
+        &-pagination {
+            display: flex;
+            justify-content: center;
+
+            .button {
+                &_page {
+                    margin: 5px;
+                    width: 40px;
+                    height: 50px;
+                    padding: 13px 15px;
+                    margin-left: 37px;
+                    background: none;
+
+                    
+                    }
+                >:last-child {
+                        display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.button {
+    background-color: none;
+
+    &_fundaction,
+    &_organization,
+    &_location {
+    font-size: 24px;
+    padding: 11px 50px;
+    width: 208px;
+    height: 79px;
+    margin-top:0;
+    background: none;
+    }
+
+    &_fundaction,
+    &_organization {
+        margin-right: 126px;
+    }
+
+    &_organization {
+        padding: 11px 19px;
+    }
+
+    &_page {
+
+    }
+}
+
+ul {
+    list-style: none;
+
+    > li {
+        border-bottom: 1px solid #707070;
+        margin-bottom: 34px;
+        padding-bottom: 31px;
+    }
+    :last-child {
+        border-bottom: none;
+    }
+}
+
+.list {
+    &_li {
+        display: flex;
+        justify-content: space-between;
+        min-width: 1344px;
+
+        &-capital {
+            font-size: 26px;
+            font-weight: 300;
+            
+        }
+        &-target {
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        &-desc {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+}

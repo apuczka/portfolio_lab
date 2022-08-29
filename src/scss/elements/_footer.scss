@@ -1,0 +1,31 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: 273px;
+    margin-right: 142px;
+    font-size: 18px;
+
+    &_text {
+        margin-right: 587px;
+
+    }
+
+    &_img {
+      
+
+        &_1,
+        &_2 {
+            width: 30px;
+            height: 30px;
+
+        }
+        &_1 {
+            margin-right: 20px;
+        }
+
+        
+    }
+}
