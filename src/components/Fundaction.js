@@ -91,7 +91,7 @@ function Fundaction() {
             .map((element, index) => {
               return (
                 <button className="button_page" 
-                style={{border: activeTab === 1 ? "1px solid #707070" : "none"}}
+                style={{border: currentPage === index + 1 ? "1px solid #707070" : "none"}}
                 onClick={() => {setCurrentPage(index + 1);
                   activeTab(index + 1);
                 }}>
