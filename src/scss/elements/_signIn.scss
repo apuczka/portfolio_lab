@@ -52,12 +52,13 @@
     &_2 {
         font-family: $font-base;
 
-        width: 117px;
+        // width: 117px;
         height: 50px;
         font-weight: 300;
         background: none;
         font-size: 18px;
         border: none;
+        text-decoration: none;
     }
     &_2 {
         border: 0.75px solid $dark-grey;

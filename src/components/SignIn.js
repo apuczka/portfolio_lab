@@ -34,7 +34,7 @@ function SignIn() {
 
         </div>
         <div className="button">
-        <button className="button_1">Załóż konto</button>
+        <RouterLink to='/signUp' className="button_1">Załóż konto</RouterLink>
         <button className="button_2"> Zaloguj się</button>
 
         </div>
