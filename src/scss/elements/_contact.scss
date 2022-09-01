@@ -109,3 +109,16 @@ input {
     border: 0;
     border-bottom: 1px solid black;
 }
+.error_message {
+    color: red;
+}
+
+.success_message {
+    font-size: 20px;
+    font-weight: 700;
+    color: green;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
