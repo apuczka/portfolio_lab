@@ -1,22 +1,34 @@
-function SignForm() {
+// import SignIn from "./SignIn";
 
-    return (
+// function SignForm() {
 
-        <form className="sign_form">
-            <label className="form_name">
-                <div className="form_name-email">Email</div>
-                <input type="email" />
+
+
+    
+
+//     return (
+
+//         <form className="sign_form">
+//             <label className="sign_form_name">
+//                 <div className="sign_form_name-email">Email</div>
+//                 <input 
+//                     value={emailValue}
+//                     onChange={(e) => setEmailValue(e.target.value)}
+//                     type="email" />
             
-                <div className="form_name-pass">Hasło</div>
-                <input type="password" />
+//                 <div className="sign_form_name-pass">Hasło</div>
+//                 <input
+//                     value={passwordValue}
+//                     onChange={(e) => setPasswordValue(e.target.value)} 
+//                     type="password" />
 
                 
 
-            </label>
+//             </label>
         
-        </form>
+//         </form>
 
-    )
-}
+//     )
+// }
 
-export default SignForm;
+// export default SignForm;

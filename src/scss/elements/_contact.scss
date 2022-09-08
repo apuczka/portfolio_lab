@@ -69,10 +69,20 @@
     font-weight: 600;
     margin-right: 142px;
     z-index: 1;
+    width: 528px;
 
-    &_name {
-        display: flex;
+    &_name,
+    &_email {
+        // display: flex;
         margin-bottom: 40px;
+        width: 256px;
+        height: 62px;
+        margin-right: 16px;
+
+        input {
+            width: 256px;
+            font-size: 18px;
+        }
 
         form {
             margin-bottom: 44px;
@@ -85,6 +95,12 @@
     flex-direction: column;
 
 }
+
+.contact-form2 {
+    display: flex;
+}
+
+
 textarea {
     margin-top: 12px;
     border: 0;
@@ -103,11 +119,13 @@ textarea {
     border: 0.75px solid black;
     position: relative;
     left: 400px;
+    cursor: pointer;
 }
 
 input {
     border: 0;
     border-bottom: 1px solid black;
+    font-size: 18px;
 }
 .error_message {
     color: red;

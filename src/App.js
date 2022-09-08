@@ -5,6 +5,9 @@ import "./scss/App.scss";
 import Home from "./components/Home";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import LogOut from "./components/LogOut";
+import Main from "./components/Main";
+import MainForm from './components/MainForm';
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/logOut" element={<LogOut />} />
+        <Route path='/main' element={<Main />} />
+        <Route path='/mainForm' element={<MainForm />} />
       </Routes>
   
     </div>

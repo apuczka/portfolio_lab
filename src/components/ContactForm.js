@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// import Form from "./Form";
+
 
 
 function ContactForm() {
@@ -27,7 +29,7 @@ function ContactForm() {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+    let response = await fetch("http://localhost:8888/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,21 +48,22 @@ function ContactForm() {
        console.log(formValues)
     }
   })
+
   const validate = (values) => {
     const errors = {};
     const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const regex2 = /^[A-Za-z]+$/;
     if(!values.name) {
-      errors.name = "Podane imię jest nieprawidłowe!"
+      errors.name = "Podaj swoje imię"
     }else if(!regex2.test(values.name)) {
       errors.name = "Podane imię jest nieprawidłowe!"
     }
     if(!values.email) {
-      errors.email = "Podany email jest nieprawidłowy!"
+      errors.email = "Podaj swój email!"
     } else if(!regex.test(values.email)) {
       errors.email = "Podany email jest nieprawidłowy!"
     }
-    if(values.message.length < 120 ) {
+    if(values.message.length < 12 ) {
       errors.message = "Wiadomość musi mieć conajmniej 120 znaków!"
     }
     return errors;
@@ -76,25 +79,25 @@ function ContactForm() {
         {Object.keys(formErrors).length == 0 && isSubmit ? (
           <div className="success_message">Wiadomość została wysłana! Wkrótce się skontaktujemy</div> ) : (<div></div>)
         }
-        <div>
-        <label className="contact-form_name">
+        <div className="contact-form2">
+          <label className="contact-form_name">
 
-<div>Wpisz swoje imię</div>
-<input 
-type="text" 
-id="name"  
-placeholder="Krzysztof" 
-value={ formValues.name }
-onChange={handleChange}
-style={{borderBottomColor: formErrors.name ? "red" : "black"}}
-/>
+          <div>Wpisz swoje imię</div>
+        <input 
+          type="text" 
+          id="name"  
+          placeholder="Krzysztof" 
+          value={ formValues.name }
+          onChange={handleChange}
+          style={{borderBottomColor: formErrors.name ? "red" : "black"}}
+        />
 
-<span className="error_message"> {formErrors.name}</span>
-</label>
-<label>
+            <span className="error_message"> {formErrors.name}</span>
+          </label>
+          <label className="contact-form_email">
 
 
-<div>Wpisz swój email</div>
+                <div>Wpisz swój email</div>
                 <input 
                 type="email" 
                 id="email" 
@@ -124,7 +127,7 @@ style={{borderBottomColor: formErrors.name ? "red" : "black"}}
                 <span style={{color: "red"}} >{formErrors.message}</span>
 
             </label>
-            <button className="contact-form_send">{status}</button>
+            <button disabled={!formErrors} className="contact-form_send">{status}</button>
         </form>
         
         </>

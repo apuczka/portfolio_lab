@@ -18,7 +18,7 @@
     
 .sign_form{
     width: 395px;
-    height: 235px;
+    height: 250px;
     background: $white;
     font-size: 16px;
     font-weight: 400;
@@ -26,27 +26,32 @@
 
 }
 
-.form_name {
+.sign {
+    &_form_name {
     flex-direction: column;
     align-items: center;
     padding: 40px 67px;
 
     &-email,
     &-pass {
-        position:relative;
-        left: -80px;
+        // position:relative;
+        // left: -80px;
+        margin-left: 67px;
+        margin-top: 30px;
     }
 
     input {
         background: #F0F1F1;
         height: 35px;
-        width: 208px;
+        width: 250px;
         margin-bottom: 31px;
+        margin-left: 67px;
     }
+}
 }
 
 .button {
-    text-align: center;
+    // text-align: center;
     margin-top: 40px;
     &_1,
     &_2 {
@@ -59,12 +64,26 @@
         font-size: 18px;
         border: none;
         text-decoration: none;
+        margin-top: 40px;
+        width: 117px;
+    }
+    &_1{
+        position: absolute;
+        left: 640px;
+        top: 700px;
     }
     &_2 {
         border: 0.75px solid $dark-grey;
         padding: 15px 13px;
-        margin-left: 292px;
+        margin-left: 350px;
     }
+}
+.error_message-log {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -30px;
+    color: red;
+    font-size: 14px;
 }
 
 

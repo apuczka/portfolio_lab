@@ -4,9 +4,23 @@
 
 .signUp {
     height: 328px;
+    padding-bottom: 40px;
      
 }
-.form_name-pass-repeat {
-    position: relative;
-    left: -45px;
+.sign_form_name-pass-repeat {
+   margin-left: 67px;
+   margin-top: 32px;
+}
+.button {
+     &_2 {
+        padding: 0;
+     } 
+}
+.signUp_button  .button_1 {
+
+    top: 820px;
+}
+.signUp_button .button_2 {
+    margin-top: 100px;
+
 }
