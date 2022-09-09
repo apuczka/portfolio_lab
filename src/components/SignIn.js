@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link as RouterLink, Routes, Route, useNavigate } from "react-router-dom";
-import {  Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -74,7 +74,7 @@ export default function SignIn() {
         // maybe trigger a loading screen
         return;
       }
-      if (user) navigate("/dashboard");
+      if (user) navigate("/main");
   }, [user, loading]);
   
   
@@ -91,7 +91,7 @@ export default function SignIn() {
 
                     <nav className="navbar_navigation">
                         <RouterLink className='navbar_navigation-links' to="/">Start</RouterLink>
-                        <RouterLink className='navbar_navigation-links'  to="/" ><Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={50} duration={250} to="whatsUp">O co chodzi?</Link></RouterLink>
+                        <Link className='navbar_navigation-links' activeClass='active'  spy={true} smooth={true} offset={50} duration={250} to="whatsUp">O co chodzi?</Link>
                         <Link className='navbar_navigation-links' activeClass='active' to="aboutUs" spy={true} smooth={true} offset={0} duration={250}>O nas</Link>
                         <Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={0} duration={250}to="fundaction">Fundacje i organizacje</Link>
                         <Link className='navbar_navigation-links' activeClass='active' spy={true} smooth={true} offset={0} duration={500}to="contact">Kontakt</Link>
@@ -104,7 +104,7 @@ export default function SignIn() {
 
             {/* <form onSubmit={handleSubmit} className="sign_form"> */}
 
-            <form  className="sign_form">
+            <div  className="sign_form">
             <label className="sign_form_name">
                 <div className="sign_form_name-email">Email</div>
                 <input 
@@ -144,7 +144,7 @@ export default function SignIn() {
 
         </div>
         
-        </form>
+        </div>
 
 
         </div>

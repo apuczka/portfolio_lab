@@ -8,6 +8,7 @@ import SignUp from "./components/SignUp";
 import LogOut from "./components/LogOut";
 import Main from "./components/Main";
 import MainForm from './components/MainForm';
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/logOut" element={<LogOut />} />
         <Route path='/main' element={<Main />} />
-        <Route path='/mainForm' element={<MainForm />} />
+        {/* <Route path='/dashboard' element={<Dashboard /> } /> */}
+        {/* <Route path='/mainForm' element={<MainForm />} /> */}
       </Routes>
   
     </div>

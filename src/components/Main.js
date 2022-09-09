@@ -12,7 +12,7 @@ import MainHeader from './MainHeader';
 function Main() {
     return (
       <>
-         <MainHeader />
+        <MainHeader />
         <HomeThreeColumns />
         <WhatsUp />
         <AboutUs />

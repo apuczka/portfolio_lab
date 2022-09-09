@@ -40,15 +40,16 @@ const logInWithEmailAndPassword = async (email, password) => {
   };
 
 
-const registerWithEmailAndPassword = async (email, password) => {
+const registerWithEmailAndPassword = async (email, password, repeat) => {
     try {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
+      const res = await createUserWithEmailAndPassword(auth, email, password, repeat);
       const user = res.user;
       await addDoc(collection(db, "users"), {
         uid: user.uid,
         authProvider: "local",
         email,
       });
+      
     } catch (err) {
       console.error(err);
       alert(err.message);

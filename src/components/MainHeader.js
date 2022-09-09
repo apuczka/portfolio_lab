@@ -1,13 +1,34 @@
-import { useState } from "react";
 import { Link as RouterLink, Routes, Route } from "react-router-dom";
 import {  Link, animateScroll as scroll } from "react-scroll";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import { auth, db, logout } from "../firebase";
+import { query, collection, getDocs, where } from "firebase/firestore";
 
 
 
 
 function MainHeader() {
 
-    const [ emailValue, setEmailValue] = useState('grzegorz@gmail.com')
+    const [user, loading, error] = useAuthState(auth);
+    const [name, setName] = useState("");
+    const navigate = useNavigate();
+    const fetchUserName = async () => {
+      try {
+        const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+        const doc = await getDocs(q);
+      
+      } catch (err) {
+        console.error(err);
+        alert("Coś poszło nie tak");
+      }
+    };
+    useEffect(() => {
+      if (loading) return;
+      if (!user) return navigate("/");
+      fetchUserName();
+    }, [user, loading]);
 
     return (
         <>
@@ -15,9 +36,10 @@ function MainHeader() {
             <header className="header">
                 <div className="main_navbar">
                     <nav className="navbar_sign logged">
-                        <div className='navbar_sign-links'>Cześć {emailValue}</div>
+                        <div className='navbar_sign-links'>Cześć {user?.email}</div>
                         <RouterLink className='navbar_sign-links' to="/signIn">Oddaj rzeczy</RouterLink>
-                        <RouterLink className='navbar_sign-links' to="/logOut">Wyloguj się</RouterLink>
+                        {/* <RouterLink className='navbar_sign-links' to="/logOut">Wyloguj się</RouterLink> */}
+                        <button className='navbar_sign-links' onClick={logout}>Wyloguj się</button>
                     </nav>
 
 
