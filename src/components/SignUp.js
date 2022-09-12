@@ -78,6 +78,7 @@ function SignUp() {
     const [password, setPassword] = useState("");
     const [repeat, setRepeat] =useState('');
     const [user, loading, error] = useAuthState(auth);
+    const [validation, setValidation] = useState("false");
     const history = useNavigate();
     const register = () => {
       if (!email) alert("Wpisz email");
@@ -89,9 +90,13 @@ function SignUp() {
       }
     };
     useEffect(() => {
+      const emailOK = email.includes("@");
+      const textOK = password.length > 6;
+      setValidation(emailOK && textOK);
+
       if (loading) return;
       if (user) history("/signIn");
-    }, [user, loading]);
+    }, [user, loading, setEmail, setPassword]);
   
      
   
@@ -131,6 +136,7 @@ function SignUp() {
                     // style={{borderBottomColor: formErrors.email ? "red" : "black"}}
 
                      />
+                     {/* {!validation && <div className="error_message-log">Wpisz prawidłowy email</div>} */}
                    {/* <div className="error_message-log"> {formErrors.email}</div> */}
 
             
@@ -142,6 +148,8 @@ function SignUp() {
                     id="password"
                     // style={{borderBottomColor: formErrors.password ? "red" : "black"}}
                     />
+                  {validation && <div className="error_message-log">Wpisz prawidłowe hasło</div>}
+
                   {/* <div className="error_message-log"> {formErrors.password}</div> */}
 
 
