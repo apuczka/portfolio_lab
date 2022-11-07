@@ -86,7 +86,7 @@ function SignUp() {
       registerWithEmailAndPassword(email, password, repeat);
 
       } else {
-        alert("Hało musi być takie same")
+        alert("Hasło musi być takie same")
       }
     };
     useEffect(() => {
